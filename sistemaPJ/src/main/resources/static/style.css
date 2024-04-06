@@ -23,6 +23,7 @@ body {
     align-items: end;
     box-shadow: #BFD9D1 0px 20px 30px -10px;
     display: flex;
+
 }
 
 .form-check .botao {
@@ -120,6 +121,7 @@ a:hover,
     margin-top: 2em;
     padding: 0.5em;
     border-radius: 5px;
+    font-size: large;
     border: none;
     outline: none;
     transition: .4s ease-in-out;
@@ -185,6 +187,11 @@ button:active {
     padding: 24px 46px 24px 26px;
 }
 
+.nav{
+	    justify-content: center;
+}
+
+
 
 .nav-link {
     color: aliceblue !important;
@@ -195,11 +202,14 @@ button:active {
 .card {
     background-color: #000000 !important;
     border-radius: 15px !important;
-    height: auto !important;
-    width: 400px !important;
+    height: auto;
+    max-width: 400px;
+
 }
 
 .card-img {
+	max-width: 400px;
+	max-height: 225px;
     border-radius: 15px !important;
 }
 
@@ -215,13 +225,15 @@ button:active {
 }
 
 .carousel-item {
-    width: 60%;
+	margin-top: 100px;
+    width: 84% !important;
     margin-right: -100% !important;
     transition: transform 1.0s ease-in-out 0.4s;
 }
 
 .carousel-inner {
     display: inline-block;
+    margin-left: 110px;
 }
 
 .carousel-control-next,
@@ -230,8 +242,9 @@ button:active {
     width: 50px !important;
     height: 50px;
     margin: 10px;
-    top: 200px !important;
-    margin: 10px !important;
+    top: 300px !important;
+    margin: 20px !important;
+    margin-right: 50px !important;
 }
 
 .carousel-item .card {

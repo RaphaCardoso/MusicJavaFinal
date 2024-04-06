@@ -28,7 +28,7 @@ public class UsuarioController {
 		return "login";
 	}
 
-	@PostMapping("/cadastrar")
+	@PostMapping("/listarUser")
 	public String salvarUsuario(@ModelAttribute Usuario user, Model model) {
 		// @ModelAttribute víncula as informações do formulário a um objeto
 
@@ -46,6 +46,11 @@ public class UsuarioController {
 	@GetMapping("/adicionar")
 	public String adicionarUser() {
 		return "cadastro";
+	}
+	
+	@GetMapping("/principal")
+	public String paginaPrincipal() {
+		return "main";
 	}
 
 	@GetMapping("/editar")
@@ -71,14 +76,14 @@ public class UsuarioController {
 	public String listarUsuario(@RequestParam(value = "message", required = false) String message, Model model) {
 		// /user/lista? message = hello%Word
 
-		// Lista os pagamentos
+		// Lista os usuários
 		List<Usuario> user = service.buscarTodosUsuarios();
 		model.addAttribute("lista", user);
 
 		// mensagem caso exista
 		model.addAttribute("Mensagem", message);
 
-		return "main";
+		return "redirect:listarUsuario";
 	}
 
 	@PostMapping("/atualizar")

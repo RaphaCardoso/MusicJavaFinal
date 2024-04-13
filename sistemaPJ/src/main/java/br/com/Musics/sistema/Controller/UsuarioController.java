@@ -28,7 +28,7 @@ public class UsuarioController {
 		return "login";
 	}
 
-	@PostMapping("/listarUser")
+	/*@PostMapping("/listarUser")
 	public String salvarUsuario(@ModelAttribute Usuario user, Model model) {
 		// @ModelAttribute víncula as informações do formulário a um objeto
 
@@ -41,7 +41,7 @@ public class UsuarioController {
 		model.addAttribute(mensagem);
 
 		return "redirect:listar";
-	}
+	}*/
 
 	@GetMapping("/adicionar")
 	public String adicionarUser() {
@@ -86,7 +86,7 @@ public class UsuarioController {
 		return "redirect:listarUsuario";
 	}
 
-	@PostMapping("/atualizar")
+	/*@PostMapping("/atualizar")
 	public String atualizarPagamento(@ModelAttribute Usuario user, RedirectAttributes attributes) {
 
 		service.atualizarUsuario(user);
@@ -95,7 +95,7 @@ public class UsuarioController {
 		attributes.addAttribute("message", "Usuário com o id : " + id + " foi atualizado");
 
 		return "redirect:listarUsuario";
-	}
+	}*/
 
 	@GetMapping("/deletar")
 	public String deletarPagamento(@RequestParam Long id, RedirectAttributes attributes) {
